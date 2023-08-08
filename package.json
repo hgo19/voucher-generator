@@ -25,6 +25,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "jspdf": "^2.5.1"
+    "jspdf": "^2.5.1",
+    "nodemailer": "^6.9.4"
   }
 }
