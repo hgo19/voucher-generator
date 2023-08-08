@@ -33,5 +33,6 @@ module.exports = {
       "@typescript-eslint"
   ],
   rules: {
+    "new-cap": 0
   }
 }
