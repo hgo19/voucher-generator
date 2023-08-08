@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.3",
+    "@types/jspdf": "^2.0.0",
     "@types/node": "^20.4.8",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "eslint": "^8.46.0",
@@ -21,5 +22,8 @@
     "jest": "^29.6.2",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "jspdf": "^2.5.1"
   }
 }
