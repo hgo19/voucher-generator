@@ -11,7 +11,7 @@ export interface UserData {
 }
 
 export class VoucherGenerator {
-  async static execute (userData: UserData): Promise<void> {
+  async execute (userData: UserData): Promise<void> {
     const base64Pdf = createPDF(userData)
     await emailClient.sendMail({
       from: process.env.EMAIL,
