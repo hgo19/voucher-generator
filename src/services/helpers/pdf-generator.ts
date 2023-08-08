@@ -7,7 +7,7 @@ const doc = new jsPDF({
   format: 'a4'
 })
 
-export const createPDF = (userData: UserData): void => {
+export const createPDF = (userData: UserData): string => {
   const { name, email, checkIn, checkOut, dailyRate, total } = userData
   // Insert Title
   doc.setFontSize(50)
@@ -29,6 +29,7 @@ export const createPDF = (userData: UserData): void => {
   doc.setFontSize(15)
   doc.text(`Total: ${total}`, 15, 9)
 
-  // Save PDF
-  doc.save('voucher.pdf')
+  // Get an base64 output
+  const pdfOutput = doc.output('datauristring')
+  return pdfOutput
 }

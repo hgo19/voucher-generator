@@ -1,15 +1,16 @@
+import { createPDF } from './helpers/pdf-generator'
+
 export interface UserData {
   name: string
   email: string
-  checkIn: Date
-  checkOut: Date
-  category: string
+  checkIn: string
+  checkOut: string
   dailyRate: string
   total: string
 }
 
 export class VoucherGenerator {
-  async execute (userData: UserData): Promise<string> {
-    return ''
+  async execute (userData: UserData): Promise<void> {
+    const base64Pdf = createPDF(userData)
   }
 }
